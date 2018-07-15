@@ -153,7 +153,15 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0; }
-
+  
+/* Second
+__________________________________________________ */
+.second {
+  background-image: url('https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjAy4L_5Z_cAhWNd98KHerUDCQQjRx6BAgBEAU&url=https%3A%2F%2Fwww.wired.com%2F2016%2F12%2Fstunning-space-photos-2016%2F&psig=AOvVaw3_YuDKW6SRYYpkEltPN4do&ust=1531699110715520')
+  background-size: cover;
+  color: #ffffff
+  padding-bottom: 5rem;
+}
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
