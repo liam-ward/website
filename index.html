@@ -85,7 +85,47 @@ $(document).ready(function() {
     </div>
   </div>
 </div>
+<div id="contact" class="section fourth" style="padding: 8rem 0 7rem; background-color: #f77e8c; color: white;">
+  <div class="container">
+    <div class="row">
+      <div class="six columns" style="margin-top: 10%; margin-bottom: 10%;">
+        <h2>Contact</h2>
+      </div>
+      <div class="six columns" style="margin-top: 10% margin-bottom: 10%">
+<form action="myprocessingscript.php" style="color: black;" method="POST">
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleTextInput" style="color: white;">Your name</label>
+      <input class="u-full-width"  name="field1" type="text" placeholder="John Doe" id="exampleEmailInput">
+    </div>
+    <div class="six columns">
+      <label for="exampleEmailInput" style="color: white;">Your email</label>
+      <input class="u-full-width" name="field2" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+    </div>
+  </div>
+  <label for="exampleMessage" style="color: white;">Message</label>
+  <textarea class="u-full-width" name="field3" placeholder="Hi Liam …" id="exampleMessage"></textarea>
+  <input class="button-primary" name="submit" type="submit" value="Save Data">
+</form>
+      </div>
+    </div>
+  </div>
+</div>
 
+<?php
+if(isset($_POST['field1']) && isset($_POST['field2'])) {
+    $data = $_POST['field1'] . '-' . $_POST['field2'] . "\r\n";
+    $ret = file_put_contents('/tmp/mydata.txt', $data, FILE_APPEND | LOCK_EX);
+    if($ret === false) {
+        die('There was an error writing this file');
+    }
+    else {
+        echo "$ret bytes written to file";
+    }
+}
+else {
+   die('no post data to process');
+}
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
