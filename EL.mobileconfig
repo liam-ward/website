@@ -5,7 +5,7 @@
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
-		<string>Hi, did I mention I love you? :) </string>
+		<string>I love you sooooo mUCH!</string>
 	</dict>
 	<key>PayloadContent</key>
 	<array>
@@ -186,33 +186,33 @@
 			<key>PayloadDisplayName</key>
 			<string>Web Clip</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.webClip.managed.E6FF582E-DDBE-4160-9827-2C0C5390C27B</string>
+			<string>com.apple.webClip.managed.717731B4-CCED-4BB0-92EE-470ADEA2F0A9</string>
 			<key>PayloadType</key>
 			<string>com.apple.webClip.managed</string>
 			<key>PayloadUUID</key>
-			<string>E6FF582E-DDBE-4160-9827-2C0C5390C27B</string>
+			<string>717731B4-CCED-4BB0-92EE-470ADEA2F0A9</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>Precomposed</key>
 			<false/>
 			<key>URL</key>
-			<string>http://emilyandliam.000webhostapp.com</string>
+			<string>http://emilyandliam.github.io</string>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Ily Emily</string>
+	<string>Ily</string>
 	<key>PayloadDisplayName</key>
 	<string>E + L</string>
 	<key>PayloadIdentifier</key>
-	<string>Liams-MacBook-Pro.925B1C3D-10DB-4C2E-BE49-05530875219C</string>
+	<string>Liams-MacBook-Pro.77197E40-FC21-47AD-BD31-965FCEF2B4E3</string>
 	<key>PayloadOrganization</key>
-	<string>LAW Web App Development</string>
+	<string>LAW Web Apps</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>1821AC5B-3AF7-4463-B9E3-5974EE030BEE</string>
+	<string>B006CB31-89C4-4BC1-8253-9BED93838862</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
