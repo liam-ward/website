@@ -227,17 +227,15 @@ a:hover {
    margin: 0px;
  }
 /* Change the color of links on hover */
-.port h3:hover {
-  background-color: #ddd;
+.port-container img:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=40); /* msie */
   color: black;
 }
 
-/* Add a color to the active/current link */
-.port h3.active {
-  background-color: #63bd5e;
-  color: white;
+.port-container h3:hover {
+  color: black;
 }
-
 /* Centered text */
 .centered-text {
   position: absolute;
