@@ -209,8 +209,10 @@ a:hover {
 
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #353535;
-    color: white;
+    background-color: white;
+    border-style: solid;
+    border-color: #353535;
+    color: #353535;
   }
 
 /* Portfolio
