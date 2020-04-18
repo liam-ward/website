@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/vaakash/socializer/80391a50/css/socializer.min.css">
@@ -51,24 +51,27 @@ $(document).ready(function() {
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <header>
-    <div class="container" style="font-family: 'Raleway'">
-      <div class="row"  style="margin-top: 40px">
-        <div class="ten columns" style="color: #353535;">
-        <h3><span style="font-weight: 600; margin-top: 1px;">Liam  Ward <span style="font-size: 100%; color: #a83232; font-weight: 200; margin-top: 1px;">❯</span>❯</span><span style="font-size: 100%; color: #a83232; font-weight: 200; margin-top: 1px;">  Mechanical Engineer</span></h3>
+  <nav class="nav-show">
+      <div class="container">
+          <ul>
+              <li><a href="#home"><span style="color: #353535; font-weight: 700;">Liam  Ward <span style="font-size: 100%; color: #a83232; font-weight: 200;">❯</span>❯</span><span style="font-size: 100%; color: #a83232; font-weight: 200;">  Mechanical Engineer</span></a></li>
+              <li>
+                  <a href="#decks">Portfolio</a>
+                  <ul>
+                      <li><a href="#">Ox Dome</a></li>
+                      <li><a href="#">Electric Screwdriver Disassembly</a></li>
+                      <li><a href="#">Physics Research</a></li>
+                  </ul>
+              </li>
+              <li><a href="#spoilers">About Me</a></li>
+              <li><a href="#combos">Contact</a></li>
+              <li><a href="#manage">Resumé</a></li>
+              <li class="icon">
+                  <a href="javascript:void(0);" onclick="toggleMobileNav();">&#9776;</a>
+              </li>
+          </ul>
       </div>
-    </div>
-    <div class="row">
-      <div class="eight columns" style="color: #353535; font-size: 22px">
-         <a class="button" style="margin: 10px" href="#Portfolio-Title">Portfolio</a>
-         <a class="button" style="margin: 10px" href="#About-Me-Title">About Me</a>
-         <a class="button" style="margin: 10px" href="#Resume-Title">Resumé</a>
-         <a class="button" style="margin: 10px" href="#Contact">Contact</a>
-       </div>
-      </div>
-    </div>
-    <hr  style="color:#a83232">
-  </header>
+  </nav>
 <!-- <div id="Main-Title" class="section first" style="padding: 8rem 0 7rem; background-color: white; font-family: 'Raleway', sans-serif; color: #353535;">
   <div class="container">
     <div class="row">
@@ -188,5 +191,7 @@ $(document).ready(function() {
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/gh.js"></script>
 </body>
 </html>
