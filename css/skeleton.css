@@ -224,7 +224,7 @@ nav ul li a {
 	padding: 14px 16px;
 
 	color: #757575;
-	font-size: 1.7rem;
+	font-size: 2rem;
 	text-decoration: none;
 
 	transition: 0.2s;
@@ -271,7 +271,7 @@ nav ul li.right { float: right; }
 nav ul li.icon { display: none; }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:880px) {
+@media screen and (max-width:1050px) {
 	nav ul li:not(:first-child) { display: none; }
 	nav ul li.icon {
 		float: right;
@@ -280,7 +280,7 @@ nav ul li.icon { display: none; }
 }
 
 /* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens */
-@media screen and (max-width:880px) {
+@media screen and (max-width:1050px) {
 	nav.mobile ul { /* position: relative; */ }
 	nav.mobile ul li.icon {
 		position: absolute;
