@@ -185,130 +185,129 @@ a:hover {
 
   /* Nav Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .nav-hide {
-    top: -56px;
-}
+  /* .nav-hide {
+      top: -56px;
+  } */
 
-.nav-show {
-	top: 0;
-}
+  .nav-show {
+  	top: 0;
+  }
 
-/* main navigation */
-nav {
-	position: fixed;
-	width: 100%;
-	z-index: 10000;
-	background-color: #fff;
-	border-bottom: 0px solid #dcdcdc;
+  /* main navigation */
+  nav {
+  	position: fixed;
+  	width: 100%;
+  	z-index: 10000;
 
-	transition: top 0.2s ease-in-out;
-}
+  	background-color: #fff;
+  	border-bottom: 0px solid #dcdcdc;
+    border-length: 80%
+  	transition: top 0.2s ease-in-out;
+  }
 
-nav ul {
-	margin: 0;
-	background-color: #fff;
+  nav ul {
+  	margin: 0;
+  	background-color: #fff;
+  }
 
-}
+  nav ul li {
+  	display: inline;
+  	float: left;
+  	position: relative;
+  	margin: 0;
 
-nav ul li {
-	display: inline;
-	float: right;
-	position: relative;
-	margin: 0;
+  	list-style-type: none;
+  }
 
-	list-style-type: none;
-}
+  nav ul li a {
+  	display: inline-block;
+  	padding: 14px 16px;
 
-nav ul li a {
-	display: inline-block;
-	padding: 14px 16px;
-  text-align: center;
-	color: #757575;
-	font-size: 1.2rem;
-	text-decoration: none;
+  	color: #757575;
+  	font-size: 1.7rem;
+  	text-decoration: none;
 
-	transition: 0.2s;
-}
+  	transition: 0.2s;
+  }
 
-/* add caret for drop menu */
-nav ul > li a:not(:only-child):after { content: '\00a0\00a0▼'; font-size: 0.8rem; vertical-align: middle; }
+  /* add caret for drop menu */
+  nav ul > li a:not(:only-child):after { content: '\00a0\00a0▼'; font-size: 0.8rem; vertical-align: middle; }
 
-/* sub menu */
-nav ul ul {
-	position: absolute;
-	min-width: 180px;
+  /* sub menu */
+  nav ul ul {
+  	position: absolute;
+  	min-width: 180px;
 
-	height: 0px;
-	overflow: hidden; /* hide sub menu */
-}
+  	height: 0px;
+  	overflow: hidden; /* hide sub menu */
+  }
 
-nav ul li:hover ul {
-	height: auto;
-	overflow: visible; /* show sub menu */
+  nav ul li:hover ul {
+  	height: auto;
+  	overflow: visible; /* show sub menu */
 
-	border: 1px solid #dcdcdc;
-}
+  	border: 1px solid #dcdcdc;
+  }
 
-nav ul ul li {
-	display: list-item;
-	float: none;
-}
+  nav ul ul li {
+  	display: list-item;
+  	float: none;
+  }
 
-nav ul ul li a {
-	display: block;
-}
+  nav ul ul li a {
+  	display: block;
+  }
 
-/* Change background color of links on hover */
-nav ul li a:hover {
-	background-color: #eee;
-	color: #757575;
-}
+  /* Change background color of links on hover */
+  nav ul li a:hover {
 
-/* Float right the list item that should be right aligned */
-nav ul li.right { float: right; }
+  	color: black;
+  }
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-nav ul li.icon { display: none; }
+  /* Float right the list item that should be right aligned */
+  nav ul li.right { float: right; }
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:1000px) {
-	nav ul li:not(:first-child) { display: none; }
-	nav ul li.icon {
-		float: right;
-		display: inline-block;
-	}
-}
+  /* Hide the list item that contains the link that should open and close the topnav on small screens */
+  nav ul li.icon { display: none; }
 
-/* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens */
-@media screen and (max-width:1050px) {
-	nav.mobile ul { /* position: relative; */ }
-	nav.mobile ul li.icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	nav.mobile ul li {
-		float: none;
-		display: inline;
-	}
-	nav.mobile ul li a {
-		display: block;
-		text-align: left;
-	}
-	nav.mobile ul li ul {
-		position: relative;
-		height: auto;
-		overflow: visible;
-		padding-left: 20px;
-	}
-	nav.mobile ul li:hover ul {
-		border: none;
-	}
-	nav.mobile ul li.right {
-		float: none;
-	}
-}
+  /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+  @media screen and (max-width:1050px) {
+  	nav ul li:not(:first-child) { display: none; }
+  	nav ul li.icon {
+  		float: right;
+  		display: inline-block;
+  	}
+  }
 
+  /* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens */
+  @media screen and (max-width:1050px) {
+  	nav.mobile ul { /* position: relative; */ }
+  	nav.mobile ul li.icon {
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  	}
+  	nav.mobile ul li {
+  		float: none;
+  		display: inline;
+  	}
+  	nav.mobile ul li a {
+  		display: block;
+  		text-align: left;
+  	}
+  	nav.mobile ul li ul {
+  		position: relative;
+  		height: auto;
+  		overflow: visible;
+  		padding-left: 20px;
+  	}
+  	nav.mobile ul li:hover ul {
+  		border: none;
+  	}
+  	nav.mobile ul li.right {
+  		float: none;
+  	}
+  }
 /* Portfolio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Add a background color to the top navigation */
