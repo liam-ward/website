@@ -1,27 +1,27 @@
-// toggle mobile navigation
-function toggleMobileNav() {
-	if( $("nav").hasClass("mobile") ) {
-		$("nav").removeClass("mobile");
+// toggle mobile headerigation
+function toggleMobileheader() {
+	if( $("header").hasClass("mobile") ) {
+		$("header").removeClass("mobile");
 	}
 	else {
-		$("nav").addClass("mobile");
+		$("header").addClass("mobile");
 	}
 }
 
-// hide mobile nav when clicking outside of nav area
+// hide mobile header when clicking outside of header area
 $("html").click(function() {
-	$("nav").removeClass("mobile");
+	$("header").removeClass("mobile");
 });
 
-$("nav").click(function(e){
+$("header").click(function(e){
     e.stopPropagation();
 });
 
-// hide nav on scroll down
+// hide header on scroll down
 var scrolled = false;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $("nav").outerHeight();
+var headerbarHeight = $("header").outerHeight();
 
 $(window).scroll(function(event){
     scrolled = true;
@@ -36,21 +36,20 @@ setInterval(function() {
 
 function hasScrolled() {
     var st = $(this).scrollTop();
-    
+
     if(Math.abs(lastScrollTop - st) <= delta) // make sure user scrolled more than delta
         return;
-    
-    if (st > lastScrollTop && st > navbarHeight) {
-		if( !$("nav").hasClass("mobile") ) {
-			$("nav").removeClass("nav-show").addClass("nav-hide");
+
+    if (st > lastScrollTop && st > headerbarHeight) {
+		if( !$("header").hasClass("mobile") ) {
+			$("header").removeClass("header-show").addClass("header-hide");
 		}
-    } 
+    }
 	else {
         if(st + $(window).height() < $(document).height()) {
-            $("nav").removeClass("nav-hide").addClass("nav-show");
+            $("header").removeClass("header-hide").addClass("header-show");
         }
     }
-    
+
     lastScrollTop = st;
 }
-
