@@ -198,9 +198,8 @@ nav {
 	position: fixed;
 	width: 100%;
 	z-index: 10000;
-
 	background-color: #fff;
-	border-bottom: 1px solid #dcdcdc;
+	border-bottom: 0px solid #dcdcdc;
 
 	transition: top 0.2s ease-in-out;
 }
@@ -208,11 +207,12 @@ nav {
 nav ul {
 	margin: 0;
 	background-color: #fff;
+
 }
 
 nav ul li {
 	display: inline;
-	float: left;
+	float: right;
 	position: relative;
 	margin: 0;
 
@@ -222,9 +222,9 @@ nav ul li {
 nav ul li a {
 	display: inline-block;
 	padding: 14px 16px;
-
+  text-align: center;
 	color: #757575;
-	font-size: 2rem;
+	font-size: 1.2rem;
 	text-decoration: none;
 
 	transition: 0.2s;
@@ -271,7 +271,7 @@ nav ul li.right { float: right; }
 nav ul li.icon { display: none; }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1000px) {
 	nav ul li:not(:first-child) { display: none; }
 	nav ul li.icon {
 		float: right;
@@ -308,6 +308,7 @@ nav ul li.icon { display: none; }
 		float: none;
 	}
 }
+
 /* Portfolio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Add a background color to the top navigation */
@@ -319,7 +320,7 @@ nav ul li.icon { display: none; }
 
 /* Style the links inside the navigation bar */
 .port h3 {
-  color: #35353535;
+  color: #353535;
 }
  .port div {
    margin: 0px;
@@ -329,31 +330,23 @@ nav ul li.icon { display: none; }
  }
 /* Change the color of links on hover */
 .port-container img:hover {
-  opacity: 0.6;
-  filter: alpha(opacity=40); /* msie */
+  opacity: 0.8;
+  filter: alpha; /* msie */
   color: black;
 }
 
 .port-container h3:hover {
   color: black;
 }
-/* Centered text */
-.centered-text {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(350, 350, 350, .15);
-  padding: 10px;
-  backdrop-filter: blur(5px);
-
-}
 
 /* Container holding the image and the text */
 .port-container {
   position: relative;
   text-align: center;
-  color: white;
+  color: #353535;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
