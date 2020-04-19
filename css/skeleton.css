@@ -186,8 +186,6 @@ a:hover {
   /* Nav Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-}
-
 .header-hide {
     top: -10000000px;
 }
@@ -202,7 +200,7 @@ a:hover {
   	width: 100%;
   	z-index: 10000;
 
-  	background-color: #fff;
+  	background-color: #f7f7f7;
   	border-bottom: 0px solid #dcdcdc;
 
   	transition: top 0.2s ease-in-out;
@@ -210,7 +208,7 @@ a:hover {
 
   header ul {
   	margin: 0;
-  	background-color: #fff;
+  	background-color: #f7f7f7;
   }
 
   header ul li {
@@ -273,44 +271,44 @@ a:hover {
   /* Hide the list item that contains the link that should open and close the topnav on small screens */
   header ul li.icon { display: none; }
 
-  /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:1060px) {
-	header ul li:not(:first-child) { display: none; }
-	header ul li.icon {
-		float: right;
-		display: inline-block;
-	}
-}
+  /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topheader (li.icon) */
+  @media screen and (max-width:880px) {
+  	header ul li:not(:first-child) { display: none; }
+  	header ul li.icon {
+  		float: right;
+  		display: inline-block;
+  	}
+  }
 
-/* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens */
-@media screen and (max-width:1060px) {
-header.mobile ul { /* position: relative; */ }
-	header.mobile ul li.icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	header.mobile ul li {
-		float: none;
-		display: inline;
-	}
-	header.mobile ul li a {
-		display: block;
-		text-align: left;
-	}
-	header.mobile ul li ul {
-		position: relative;
-		height: auto;
-		overflow: visible;
-		padding-left: 20px;
-	}
-	header.mobile ul li:hover ul {
-		border: none;
-	}
-	header.mobile ul li.right {
-		float: none;
-	}
-}
+  /* The "mobile" class is added to the topheader with JavaScript when the user clicks on the icon. This class makes the header look good on small screens */
+  @media screen and (max-width:880px) {
+  	header.mobile ul { /* position: relative; */ }
+  	header.mobile ul li.icon {
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  	}
+  	header.mobile ul li {
+  		float: none;
+  		display: inline;
+  	}
+  	header.mobile ul li a {
+  		display: block;
+  		text-align: left;
+  	}
+  	header.mobile ul li ul {
+  		position: relative;
+  		height: auto;
+  		overflow: visible;
+  		padding-left: 20px;
+  	}
+  	header.mobile ul li:hover ul {
+  		border: none;
+  	}
+  	header.mobile ul li.right {
+  		float: none;
+  	}
+  }
 
 
 /* Portfolio
