@@ -68,18 +68,31 @@ $(document).ready(function() {
     </div>
   </header>
 
-  <div id="About-Me" class="section categories" style="padding: 1rem 0 0rem; background-color: #f7f7f7; font-family: 'Raleway', sans-serif; color: #353535;">
+  <div id="Resume" class="section categories" style="padding: 8rem 0 7rem; background-color: #f7f7f7; font-family: 'Raleway', sans-serif; color: #353535;">
     <div class="container">
-      <div class="row">
-        <div class="one-half column category">
-          <img class="u-full-width" src="images/pic.png">
-        </div>
-        <div class="one-half column category" style="padding-top: 40px;">
-          <h6>Liam is a mechanical engineering student in the Kilachand Honors College of Boston University. I am pursuing a concentration in aerospace engineering. I am very interested in aerospace engineering, particularly its application to space exploration, and I am driven by innovation that betters humanity and advances our knowledge of the universe around us. </h6>
-        </div>
+  <form name="contactform" method="post" action="send_form_email.php">
+    <div class="row">
+      <div class="six columns">
+        <label for="firstName">Your first name</label>
+        <input class="u-full-width" type="text" placeholder="John" type="text" name="first_name" maxlength="50" size="30" id="firstName">
+      </div>
+      <div class="six columns">
+        <label for="lastName">Your last name</label>
+        <input class="u-full-width" type="text" placeholder="Doe" type="text" name="last_name" maxlength="50" size="30" id="lastName">
       </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="six columns">
+        <label for="emailInput">Your email address</label>
+        <input class="u-full-width" type="email" placeholder="text@mailbox.com" type="text" name="email" maxlength="80" size="30" id="emailInput">
+      </div>
+    </div>
+    <label for="Message">Message</label>
+    <textarea name="comments" maxlength="1000" cols="25" rows="6" class="u-full-width" placeholder="Hi Liam …" id="Message"></textarea>
+    <input class="button-primary" type="submit" value="Submit">
+  </form>
+</div>
+</div>
 
   <div  class="section " style="padding: 1rem 0 0rem; background-color: #f7f7f7; color: #353535; font-family: 'Raleway';">
     <div class="container">
@@ -110,5 +123,6 @@ $(document).ready(function() {
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/gh.js"></script>
+    
   </body>
   </html>
