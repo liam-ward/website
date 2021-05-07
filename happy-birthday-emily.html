@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Liam Ward</title>
+  <meta name="description" content="Just a guy">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  #balloon-container {
+
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+#container {
+  margin: 90px auto;
+  height: 175px;
+  width: 170px;
+}
+
+#tail {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 40px;
+  height: 60px;
+  width: 80px;
+  border: 15px solid #D3B897;
+  border-radius: 50px;
+  display: inline-block;
+  z-index: 0;
+}
+
+#tail-mask {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 100px;
+  height: 30px;
+  width: 75px;
+  background-color: #fff;
+  z-index: 0;
+}
+
+#tail-end {
+  position: absolute;
+  margin-top: 63px;
+  margin-left: 130px;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background-color: #D3B897;
+  z-index: 1;
+}
+
+#body {
+  position: relative;
+  height: 130px;
+  width: 110px;
+  background-color: #E9CBA7;
+  border-radius: 22px;
+  display: inline-block;
+  overflow: hide;
+  z-index: 1;
+}
+
+.ear {
+  position: relative;
+  margin-top: -20px;
+  height: 45px;
+  width: 50px;
+  background-color: #E9CBA7;
+  display: inline-block;
+  z-index: 2;
+}
+
+#ear-left {
+  clip-path: polygon(0 0, 0% 100%, 100% 60%);
+}
+
+#ear-right {
+  margin-left: 6px;
+  clip-path: polygon(100% 0, 0% 60%, 100% 100%);
+}
+
+.ear-inner {
+  position: relative;
+  height: 30px;
+  width: 50px;
+  background-color: #D3B897;
+  z-index: 3;
+}
+
+#ear-inner-left {
+  margin-top: 8px;
+  margin-left: 5px;
+  clip-path: polygon(0 0, 100% 90%, 0 100%);
+}
+
+#ear-inner-right {
+  margin-top: 8px;
+  margin-left: -4px;
+  clip-path: polygon(100% 0%, 100% 100%, 0 90%);
+}
+
+#mask {
+  position: relative;
+  background-color: #E9CBA7;
+  margin-top: -29px;
+  height: 50px;
+  width: 110px;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+#patch {
+  position: relative;
+  margin-top: -50px;
+  z-index: 5;
+}
+
+.fur {
+  width: 5px;
+  background-color: #C0A98B;
+  display: inline-block;
+}
+
+.fur:first-of-type {
+  margin-left: 40%;
+  height: 15px;
+  float: left;
+}
+
+.fur:nth-of-type(2) {
+  margin-left: 4px;
+  height: 5px;
+  float: left;
+}
+
+.fur:nth-of-type(3) {
+  margin-left: 4px;
+  height: 10px;
+  float: left;
+}
+
+
+#eyes {
+  position: relative;
+  margin-top: 30%;
+  z-index: 5;
+}
+
+.eye {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #554D44;
+  display: inline-block;
+}
+
+#eye-left {
+  margin-left: 27%;
+}
+
+#eye-right {
+  margin-left: 10%;
+}
+
+.shine {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 2px;
+  margin-left: 1px;
+}
+
+#whisk-left {
+  display: inline-block;
+}
+
+.whisker {
+  height: 3px;
+  width: 25px;
+  background-color: #D3B897;
+  margin-bottom: 6px;
+}
+
+#whisk-one {
+  transform: rotate(15deg);
+}
+
+#whisk-three {
+  transform: rotate(-15deg);
+}
+
+#nose {
+  position: absolute;
+  margin-left: 15%;
+  height: 17px;
+  width: 18px;
+  background-color: #554D44;
+  clip-path: ellipse(40% 22% at 50% 50%);
+  display: inline-block;
+  z-index: 6;
+}
+
+#whisk-right {
+  display: inline-block;
+  margin-left: 56px;
+}
+
+#whisk-four {
+  transform: rotate(-15deg);
+}
+
+#whisk-six {
+  transform: rotate(15deg);
+}
+
+#smile {
+  position: relative;
+  margin-left: 29%;
+  margin-top: -22%;
+  z-index: 5;
+}
+
+#smile-left-align {
+  display: inline-block;
+  position: absolute;
+}
+
+#smile-left {
+  height: 10px;
+  width: 20px;
+  border-radius: 0 0 10px 10px;
+  background-color: #E9CBA7;
+  border: 2px solid #554D44;
+}
+
+#mask-left {
+  margin-top: -58%;
+  height: 4px;
+  width: 20px;
+  background-color: #E9CBA7;
+}
+
+#smile-right-align {
+  display: inline-block;
+  margin-left: 22px;
+  position: absolute;
+}
+
+#smile-right {
+  height: 10px;
+  width: 20px;
+  border-radius: 0 0 10px 10px;
+  background-color: #E9CBA7;
+  border: 2px solid #554D44;
+}
+
+#mask-right {
+  margin-top: -58%;
+  height: 4px;
+  width: 24px;
+  background-color: #E9CBA7;
+}
+
+#tongue {
+  position: relative;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 17px;
+  width: 15px;
+  border-radius: 25px;
+  background-color: #FC90A5;
+  z-index: 4;
+}
+
+#tummy {
+  margin-top: 13%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 60px;
+  border-radius: 50px 50px 0 0;
+  background-color: #F4E7D1;
+}
+
+#credit {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #B9B9B9;
+  margin-top: 70px;
+  left: 20px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #FC90A5;
+}
+
+a:focus,
+a:hover {
+  color: #DC7E91;
+}
+</style>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.localscroll.js" type="text/javascript"></script>
+<script src="jquery.scrollTo.js" type="text/javascript"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#novalaunch').localScroll({duration:800});
+});
+</script>
+<style>
+h1 {text-align: center;}
+</style>
+</head>
+
+<body   style="background-color: #ffff;">
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+  <h1 style=" text-align: center; font-size: 8rem; font-family: Pacifico;">Happy Birthday Emily!</h1>
+  <h2 style="text-align: center; font-size: 3rem; font-family: Raleway;">I hope you have a great day!</h2>
+  <h4 style="text-align: center; font-size: 3rem; font-family: Raleway;">Love,</h4>
+  <h3 style="text-align: center; font-size: 5rem; font-family: Pacifico;">Liam</h3>
+
+
+
+
+
+          <div id="container">
+    <div id="tail"></div>
+    <div id="tail-mask"></div>
+    <div id="tail-end"></div>
+
+    <div id="body">
+      <div class="ear" id="ear-left">
+        <div class="ear-inner" id="ear-inner-left"></div>
+      </div>
+      <div class="ear" id="ear-right">
+        <div class="ear-inner" id="ear-inner-right"></div>
+      </div>
+
+      <div id="mask"></div>
+
+      <div id="patch">
+        <div class="fur"></div>
+        <div class="fur"></div>
+        <div class="fur"></div>
+      </div>
+
+      <div id="eyes">
+        <div class="eye" id="eye-left">
+          <div class="shine" id="shine-left"></div>
+        </div>
+        <div class="eye" id="eye-right">
+          <div class="shine" id="shine-right"></div>
+        </div>
+      </div>
+
+      <div id="whisk-left">
+        <div class="whisker" id="whisk-one"></div>
+        <div class="whisker"></div>
+        <div class="whisker" id="whisk-three"></div>
+      </div>
+
+      <div id="nose"></div>
+
+      <div id="whisk-right">
+        <div class="whisker" id="whisk-four"></div>
+        <div class="whisker"></div>
+        <div class="whisker" id="whisk-six"></div>
+      </div>
+
+      <div id="smile">
+        <div id="smile-left-align">
+          <div id="smile-left"></div>
+          <div id="mask-left"></div>
+        </div>
+
+        <div id="smile-right-align">
+          <div id="smile-right"></div>
+          <div id="mask-right"></div>
+        </div>
+      </div>
+
+      <div id="tongue"></div>
+      <div id="tummy"></div>
+    </div>
+  </div>
+
+
+  </div>
+
+  <div id="balloon-container">
+
+  </div>
+
+
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/gh.js"></script>
+<script>
+    function random(num) {
+  return Math.floor(Math.random()*num)
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5)+5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7);
+  box-shadow: inset -7px -3px 10px rgba(${r-10},${g-10},${b-10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `
+}
+
+function createBalloons(num) {
+  var balloonContainer = document.getElementById("balloon-container")
+  for (var i = num; i > 0; i--) {
+  var balloon = document.createElement("div");
+  balloon.className = "balloon";
+  balloon.style.cssText = getRandomStyles();           balloonContainer.append(balloon);
+  }
+}
+
+window.onload = function() {
+  createBalloons(100);
+}
+
+</script>
+  </body>
+  </html>
